@@ -1,0 +1,18 @@
+<h1>View all of our wonderful flat</h1>
+
+<%= link_to "Create a new flat", new_flat_path %>
+
+<div class="container">
+  <div class="flats">
+    <% @flats.each do |flat| %>
+      <div class="flat_preview">
+        <%= link_to flat.name, flat_path(flat) %>
+        <%= flat.address %>
+        <%= flat.description %>
+        <%= flat.price_per_night %>
+        <%= flat.number_of_guests %>
+        <br>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<h1>Let's see the details, shall we?</h1>
+
+  <%= link_to "back to all flats", flats_path %>
+<div class="container">
+  <div class="flat">
+    <%= @flat.name %>
+    <%= @flat.address %>
+    <%= @flat.description %>
+    <%= @flat.price_per_night %>
+    <%= @flat.number_of_guests %>
+  </div>
+</div>
+<%= link_to "Delete Flat", flat_path,
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete this flat?" }
+        %> <br>
+<%= link_to "Edit Flat", edit_flat_path(@flat) %>
